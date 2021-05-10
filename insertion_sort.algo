@@ -1,0 +1,26 @@
+PROCEDURE  Insertion_sort(VAR arr : ARRAY_OF INTEGER[i],arr[i]:INTEGER)
+VAR
+    j :INTEGER;
+BEGIN
+Read(arr[i])
+j:=i-1;
+FOR j FROM i-1 TO  0 STEP -1  DO
+    IF (arr[j]>arr[i]) THEN
+        arr[j+1]:=arr[j]; 
+    ELSE
+        arr[j+1]:=arr[i];
+    END_IF
+END_FOR   
+END
+
+ALGORITHM tri_cards
+VAR
+    value,n,k:INTEGER;
+    tab :ARRAY_OF INTEGER;
+BEGIN
+    FOR k FROM 1 TO n STEP 1  DO
+        Write ('give a card')
+        Read(value)
+        Insertion_sort(tab,value)
+    END_FOR
+END
